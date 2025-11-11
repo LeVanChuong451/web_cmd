@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm mới</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Quản lý Sản phẩm</a>
+        <a href="don_hang.html">Xem Đơn hàng</a>
+    </nav>
+    <div class="container">
+        <h1>Thêm sản phẩm mới</h1>
+        <form id="addProductForm">
+            <div class="form-group"><label for="TenSP">Tên Sản phẩm</label><input type="text" id="TenSP" name="TenSP" required></div>
+            <div class="form-group"><label for="GiaBan">Giá Bán</label><input type="number" id="GiaBan" name="GiaBan" required></div>
+            <div class="form-group"><label for="GiamGia">Giảm Giá (vd: 0.1 cho 10%)</label><input type="number" step="0.01" id="GiamGia" name="GiamGia" value="0" required></div>
+            <div class="form-group"><label for="XuatXu">Xuất Xứ</label><input type="text" id="XuatXu" name="XuatXu" required></div>
+            <div class="form-group"><label for="CachDung">Cách Dùng</label><textarea id="CachDung" name="CachDung"></textarea></div>
+            <div class="form-group"><label for="CongDung">Công Dụng</label><textarea id="CongDung" name="CongDung"></textarea></div>
+            <div class="form-group"><label for="HinhSP">Link Hình ảnh</label><input type="text" id="HinhSP" name="HinhSP" placeholder="https://example.com/image.jpg"></div>
+            <div class="form-group"><label for="MaDM">Mã Danh Mục</label><input type="number" id="MaDM" name="MaDM" required></div>
+            <div class="form-group"><label for="MaDVT">Mã Đơn Vị Tính</label><input type="number" id="MaDVT" name="MaDVT" required></div>
+            <button type="submit" class="btn" style="background-color: var(--primary-color);">Thêm Sản phẩm</button>
+        </form>
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

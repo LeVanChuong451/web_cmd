@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Quản lý Sản phẩm</a>
+        <a href="don_hang.html">Xem Đơn hàng</a>
+    </nav>
+    <div class="container">
+        <h1>Danh sách sản phẩm</h1>
+        <a href="them_sanpham.html" class="btn btn-add">Thêm sản phẩm mới</a>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Mã SP</th>
+                    <th>Tên Sản phẩm</th>
+                    <th>Giá Bán</th>
+                    <th>Giảm Giá</th>
+                    <th>Xuất Xứ</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                </tbody>
+        </table>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Cập nhật sản phẩm</h2>
+            <form id="editForm">
+                <input type="hidden" id="editMaSP">
+                <div class="form-group">
+                    <label for="editGiaBan">Giá Bán:</label>
+                    <input type="number" id="editGiaBan" required>
+                </div>
+                <div class="form-group">
+                    <label for="editGiamGia">Giảm Giá (vd: 0.1 cho 10%):</label>
+                    <input type="number" step="0.01" id="editGiamGia" required>
+                </div>
+                <button type="submit" class="btn" style="background-color: var(--success-color);">Lưu thay đổi</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
